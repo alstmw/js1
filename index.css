@@ -1,0 +1,16 @@
+body{
+    background-color: wheat;
+}
+
+body{
+    color: black;
+}
+
+.form,
+.grettings {
+    display: none;
+}
+
+.showing {
+    display: block;
+}
