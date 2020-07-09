@@ -23,7 +23,7 @@ function askForName() {
 function paintGretting(text) {
     form.classList.remove(SHOWING_CN);
     gretting.classList.add(SHOWING_CN);
-    gretting.innerText = `Hello ${text}`;
+    gretting.innerText = `안녕하세요  ${text}`;
 }
 function loadName() {
     const currentUser = localStorage.getItem(USER_LS);
