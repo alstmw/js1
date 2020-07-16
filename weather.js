@@ -1,6 +1,7 @@
 const weather = document.querySelector(".js-weather");
-const API_KEY = "4e2c73ae51b78fd3ee95fd671fcd2021"
-const COORDS = "coords"
+const geo = document.querySelector(".js-geo");
+const API_KEY = "4e2c73ae51b78fd3ee95fd671fcd2021";
+const COORDS = "coords";
 
 function getWeather(lat,lng){
     fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lng}&appid=${API_KEY}&units=metric`)
@@ -8,11 +9,10 @@ function getWeather(lat,lng){
         return response.json();
     })
     .then(function(json){
-        console.log(json);
     const temperature = json.main.temp;
-    const place = json.name;
-    console.log(temperature);
-    weather.innerText = `${place} 현재기온 ${temperature}도`;
+    const place = json.name
+    geo.innerText = `${place}`;
+    weather.innerText = `현재기온 ${temperature}도`;
     });
 }
 
